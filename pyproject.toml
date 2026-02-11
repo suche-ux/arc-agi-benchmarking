@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "arc-agi-benchmarking"
-version = "0.1.0"
+version = "0.1.1"
 license = {file = "LICENSE.md"}
 classifiers = [
     "License :: OSI Approved :: BSD License"
@@ -46,8 +46,8 @@ dependencies = [
     "certifi==2024.8.30",
     "charset-normalizer==3.4.0",
     "google-api-core==2.24.1",
-    "google-auth==2.38.0",
-    "google-genai==1.14.0",
+    "google-auth",
+    "google-genai==1.62.0",
     "googleapis-common-protos==1.68.0",
     "openai==1.95.1",
     "proto-plus==1.26.0",
