@@ -13,7 +13,7 @@ import os
 import time
 from typing import List, Optional
 from google import genai
-from google3.experimental.users.rburnell.arc_agi.arc_agi_benchmarking.src.arc_agi_benchmarking.schemas import (
+from arc_agi_benchmarking.schemas import (
     ARCTaskOutput,
     Attempt,
     AttemptMetadata,
@@ -257,6 +257,7 @@ class GeminiInteractionsAdapter(ProviderAdapter):
           system_instruction=system_instruction,
           background=self.background_mode,
           store=self.background_mode,
+          tools=[{"type": "code_execution"}],
       )
 
       if self.background_mode:
@@ -304,6 +305,7 @@ class GeminiInteractionsAdapter(ProviderAdapter):
           system_instruction=system_instruction,
           stream=True,
           store=False,
+          tools=[{"type": "code_execution"}],
       )
 
       text_chunks = []
@@ -376,6 +378,7 @@ class GeminiInteractionsAdapter(ProviderAdapter):
           input=prompt,
           generation_config=extract_config if extract_config else None,
           store=False,
+          tools=[{"type": "code_execution"}],
       )
 
       response = _InteractionResponse(interaction)

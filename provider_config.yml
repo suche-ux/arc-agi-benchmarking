@@ -15,6 +15,10 @@ gemini:
   rate: 30     # 300 requests (Updated from 5)
   period: 60    # per 60 seconds
 
+googleinteractions:
+  rate: 30     # 300 requests (Updated from 5)
+  period: 60    # per 60 seconds
+
 deepseek:
   rate: 400     # 400 requests
   period: 60    # per 60 seconds

@@ -24,6 +24,7 @@ PROVIDER_API_KEYS: Dict[str, List[str]] = {
     "claude_agent_sdk": ["ANTHROPIC_API_KEY"],
     "gemini": ["GOOGLE_API_KEY"],
     "google": ["GOOGLE_API_KEY"],
+    "geminiinteractions": ["GOOGLE_API_KEY"],
     "deepseek": ["DEEPSEEK_API_KEY"],
     "fireworks": ["FIREWORKS_API_KEY"],
     "xai": ["XAI_API_KEY"],
